@@ -39,6 +39,7 @@
 </head>
 <body class="bg-darknavy text-gray-100 antialiased selection:bg-gold-500 selection:text-darknavy">
 
+    <!-- 頂部導覽列 -->
     <header class="sticky top-0 z-50 bg-darknavy/95 backdrop-blur-md border-b border-gold-500/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="index.html" class="flex items-center space-x-3">
@@ -50,35 +51,72 @@
             </a>
             <nav class="hidden md:flex space-x-8 text-sm font-medium">
                 <a href="index.html" class="hover:text-gold-400 transition">首頁</a>
-                <a href="singing-contest.html" class="text-gold-400 font-bold border-b-2 border-gold-400 pb-1">蒔光好聲音完整簡章</a>
+                <a href="singing-contest.html" class="text-gold-400 font-bold border-b-2 border-gold-400 pb-1">蒔光好聲音簡章</a>
                 <a href="gala-dinner.html" class="hover:text-gold-400 transition">蒔光盛宴餐會簡章</a>
             </nav>
             <div>
-                <a href="https://forms.gle/your-singing-contest-form-id" target="_blank" class="px-5 py-2.5 rounded-full gold-gradient-bg text-darknavy font-bold text-sm shadow-lg hover:brightness-110 transition">
+                <a id="nav-register-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdkxTtaF6EVwjOAcDw_XMCemXlQfZP02KHHXEc7KKaXD0cBDw/viewform?usp=header" target="_blank" class="px-5 py-2.5 rounded-full gold-gradient-bg text-darknavy font-bold text-sm shadow-lg hover:brightness-110 transition">
                     報名蒔光好聲音 ↗
                 </a>
             </div>
         </div>
     </header>
 
-    <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center space-y-4">
+    <!-- 頁面標題 Banner -->
+    <section class="py-10 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center space-y-4">
         <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full gold-border bg-darknavy/80 text-gold-300 text-xs sm:text-sm font-semibold tracking-widest uppercase">
             <span>活動一 (14:00 - 17:00) ｜ 台中葳格國際會議中心</span>
         </div>
         <h1 class="text-4xl sm:text-6xl font-black font-serif-tc gold-gradient-text tracking-wide">
             2026 菁英大會師<br/>蒔光好聲音・榮耀爭鋒
         </h1>
-        <p class="text-gold-200 text-lg sm:text-xl font-serif-tc tracking-widest pt-2">
+        <p class="text-gold-200 text-lg sm:text-xl font-serif-tc tracking-widest pt-1">
             以歌會友・以聲聚力・唱出榮耀
         </p>
+
+        <!-- 倒數計時器倒數區塊 -->
+        <div class="pt-4 max-w-xl mx-auto">
+            <div class="bg-cardnavy/90 border border-gold-500/40 p-6 rounded-3xl shadow-2xl space-y-3">
+                <div class="text-xs sm:text-sm text-gold-300 font-bold tracking-widest uppercase flex items-center justify-center space-x-2">
+                    <span class="animate-pulse">⏳</span>
+                    <span id="countdown-title">距離 10/27 (二) 中午 12:00 開放報名倒數</span>
+                </div>
+                
+                <div id="countdown-timer" class="grid grid-cols-4 gap-2 sm:gap-4 text-center">
+                    <div class="bg-darknavy p-3 rounded-xl border border-gold-500/20">
+                        <span id="days" class="text-2xl sm:text-4xl font-black text-white font-mono">00</span>
+                        <p class="text-[10px] text-gold-400 font-bold uppercase mt-1">天 (Days)</p>
+                    </div>
+                    <div class="bg-darknavy p-3 rounded-xl border border-gold-500/20">
+                        <span id="hours" class="text-2xl sm:text-4xl font-black text-white font-mono">00</span>
+                        <p class="text-[10px] text-gold-400 font-bold uppercase mt-1">時 (Hours)</p>
+                    </div>
+                    <div class="bg-darknavy p-3 rounded-xl border border-gold-500/20">
+                        <span id="minutes" class="text-2xl sm:text-4xl font-black text-white font-mono">00</span>
+                        <p class="text-[10px] text-gold-400 font-bold uppercase mt-1">分 (Mins)</p>
+                    </div>
+                    <div class="bg-darknavy p-3 rounded-xl border border-gold-500/20">
+                        <span id="seconds" class="text-2xl sm:text-4xl font-black text-white font-mono">00</span>
+                        <p class="text-[10px] text-gold-400 font-bold uppercase mt-1">秒 (Secs)</p>
+                    </div>
+                </div>
+
+                <div class="pt-2">
+                    <a id="main-register-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdkxTtaF6EVwjOAcDw_XMCemXlQfZP02KHHXEc7KKaXD0cBDw/viewform?usp=header" target="_blank" class="block w-full py-4 rounded-xl gold-gradient-bg text-darknavy font-black text-lg shadow-xl hover:brightness-110 transition">
+                        🔒 報名尚未開放 (10/27 中午12:00開放)
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- 主要內容區域 -->
     <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
 
         <section class="bg-cardnavy p-8 sm:p-10 rounded-3xl gold-border-glow space-y-4">
             <h2 class="text-2xl font-bold font-serif-tc text-gold-300">一、活動緣起與宗旨</h2>
             <div class="text-gray-300 text-sm sm:text-base leading-relaxed space-y-3">
-                <p>2026年適逢逢甲大學65週年、第10屆臺中市逢甲大學EMBA校友會，以及第20屆逢甲大學EMBA聯誼會的重要年度。</p>
+                <p>2026年適逢逢甲大學65週年、第10屆臺中市逢甲大學EMBA校友會，以及第20屆逢甲大學EMBA聯誼會 Important 年度。</p>
                 <p>第20屆聯誼會以「菁英聚力・榮耀二十」為年度主題，並以「蒔」作為傳承、播種與凝聚的核心意象。</p>
                 <p>延續8月1日理事長交接典禮所凝聚的能量，12月6日菁英大會師將以「蒔光好聲音」為活動亮點，邀請在校班級、11個健會及歷屆畢業學長姐同台競演。</p>
                 <p>透過歌聲、舞台魅力及應援團創意應援，展現逢甲EMBA團隊精神，讓不同屆別、班級與健會之間有更多交流機會。</p>
@@ -133,7 +171,7 @@
                 <p>3. 畢業學長姐名額採公開報名，若報名超過3人，以報名時間順序前三位為正取人選，候補名額待正取人選取消後通知補上。</p>
                 <p>4. 各參賽單位可指定一位聯絡窗口，統一處理報名、伴奏、應援團及獎金領取。</p>
                 <p>5. 比賽前三名將於餐會榮耀獻唱，季軍、亞軍、冠軍各演唱一首自選曲。</p>
-                <p class="text-gold-200 font-bold pt-2">⏰ 報名時間：活動資訊公告於10/24(六)，報名連結統一於10/27(二)中午12:00開放。</p>
+                <p class="text-gold-200 font-bold pt-2">⏰ 報名時間：活動資訊公告於10/24(六)，報名連結統一於 2026/10/27 (二) 中午 12:00 正式開放。</p>
             </div>
         </section>
 
@@ -302,43 +340,4 @@
                     <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center"><span class="font-bold text-gold-300">14. 最佳視覺焦點獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span></div>
                     <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center"><span class="font-bold text-gold-300">15. 最佳創意演出獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span></div>
                     <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center"><span class="font-bold text-gold-300">16. 最佳互動魅力獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span></div>
-                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center"><span class="font-bold text-gold-300">17. 最佳氣勢非凡獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span></div>
-                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center"><span class="font-bold text-gold-300">18. 最佳驚艷演出獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span></div>
-                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center"><span class="font-bold text-gold-300">19. 最佳歌聲感染獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span></div>
-                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center"><span class="font-bold text-gold-300">20. 最佳勇氣挑戰獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span></div>
-                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center"><span class="font-bold text-gold-300">21. 最佳自信風采獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span></div>
-                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center"><span class="font-bold text-gold-300">22. 最佳魅力新聲獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span></div>
-                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center"><span class="font-bold text-gold-300">23. 最佳音樂故事獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span></div>
-                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center"><span class="font-bold text-gold-300">24. 最佳溫暖人心獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span></div>
-                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center"><span class="font-bold text-gold-300">25. 最佳菁英風華獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span></div>
-                </div>
-            </div>
-
-            <div class="bg-darknavy p-5 rounded-2xl gold-border text-xs sm:text-sm text-gray-300 space-y-2">
-                <p class="font-bold text-gold-400 text-base">💰 （三）獎金領取與運用規範</p>
-                <p>• 各班代表所得獎金，原則作為所屬班級班費。</p>
-                <p>• 各健會代表所得獎金，原則作為所屬健會運作費用。</p>
-                <p>• 畢業學長姐所得獎金，由得獎者自行決定使用方式。</p>
-                <p>• 前三名僅領取名次獎金，不重複領取一般參賽獎金。</p>
-                <p>• 班級及健會獎金由指定窗口領取並簽收，後續使用依各單位內部管理辦理。應事前公告獎金領取、簽收及依法辦理稅務處理之方式。</p>
-            </div>
-        </section>
-
-        <section class="text-center py-8">
-            <a href="https://forms.gle/your-singing-contest-form-id" target="_blank" class="px-10 py-5 rounded-2xl gold-gradient-bg text-darknavy font-black text-xl shadow-2xl hover:scale-105 transition inline-block">
-                開啟【蒔光好聲音】Google 官方報名表單 ↗
-            </a>
-            <p class="text-xs text-gold-400 mt-3">統一於 10/27 (二) 中午 12:00 開放線上報名</p>
-        </section>
-
-    </main>
-
-    <footer class="bg-darknavy border-t border-gold-500/30 py-8 text-center text-sm text-gray-400 mt-12">
-        <div class="max-w-4xl mx-auto px-4 space-y-2">
-            <p class="font-bold gold-gradient-text font-serif-tc text-base">逢甲大學 EMBA 第 20 屆聯誼會</p>
-            <p class="text-xs text-gray-500">2026 菁英大會師籌備小組 版權所有</p>
-        </div>
-    </footer>
-
-</body>
-</html>
+                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-

@@ -10,8 +10,11 @@
             theme: {
                 extend: {
                     colors: {
-                        gold: { 100: '#FFF9E6', 200: '#FFECA8', 300: '#FFE28A', 400: '#F5C842', 500: '#D4AF37', 600: '#AA820A' },
-                        darknavy: '#050A14', cardnavy: '#0C1526'
+                        gold: {
+                            100: '#FFF9E6', 200: '#FFECA8', 300: '#FFE28A',
+                            400: '#F5C842', 500: '#D4AF37', 600: '#AA820A', 700: '#806000'
+                        },
+                        darknavy: '#050A14', cardnavy: '#0C1526', accentblue: '#132238'
                     }
                 }
             }
@@ -21,19 +24,26 @@
     <style>
         body { font-family: 'Noto Sans TC', sans-serif; background-color: #050A14; color: #F3F4F6; }
         .font-serif-tc { font-family: 'Noto Serif TC', serif; }
-        .gold-gradient-text { background: linear-gradient(135deg, #FFF9E6 0%, #FFE28A 30%, #D4AF37 70%, #AA820A 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF9E6 0%, #FFE28A 30%, #D4AF37 70%, #AA820A 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
         .gold-border { border: 1px solid #D4AF37; }
-        .gold-border-glow { border: 1px solid rgba(212, 175, 55, 0.4); box-shadow: 0 0 20px rgba(212, 175, 55, 0.15); }
+        .gold-border-glow {
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+        }
         .gold-gradient-bg { background: linear-gradient(135deg, #FFE28A 0%, #D4AF37 50%, #AA820A 100%); }
     </style>
 </head>
-<body class="bg-darknavy text-gray-100 antialiased">
+<body class="bg-darknavy text-gray-100 antialiased selection:bg-gold-500 selection:text-darknavy">
 
-    <!-- 導覽列 -->
-    <header class="sticky top-0 z-50 bg-darknavy/90 backdrop-blur-md border-b border-gold-500/30">
+    <!-- 頂部導覽列 -->
+    <header class="sticky top-0 z-50 bg-darknavy/95 backdrop-blur-md border-b border-gold-500/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="index.html" class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-full gold-gradient-bg flex items-center justify-center text-darknavy font-black text-lg">20</div>
+                <div class="w-10 h-10 rounded-full gold-gradient-bg flex items-center justify-center text-darknavy font-black text-lg shadow-lg">20</div>
                 <div>
                     <h1 class="text-base sm:text-lg font-bold gold-gradient-text font-serif-tc">逢甲EMBA 第二十屆聯誼會</h1>
                     <p class="text-xs text-gold-300">菁英聚力・榮耀二十</p>
@@ -41,137 +51,338 @@
             </a>
             <nav class="hidden md:flex space-x-8 text-sm font-medium">
                 <a href="index.html" class="hover:text-gold-400 transition">首頁</a>
-                <a href="singing-contest.html" class="text-gold-400 font-bold">蒔光好聲音流程細節</a>
-                <a href="gala-dinner.html" class="hover:text-gold-400 transition">蒔光盛宴晚宴細節</a>
+                <a href="singing-contest.html" class="text-gold-400 font-bold border-b-2 border-gold-400 pb-1">蒔光好聲音完整簡章</a>
+                <a href="gala-dinner.html" class="hover:text-gold-400 transition">蒔光盛宴晚宴簡章</a>
             </nav>
-            <a href="https://forms.gle/your-singing-contest-form-id" target="_blank" class="px-5 py-2.5 rounded-full gold-gradient-bg text-darknavy font-bold text-sm shadow-lg hover:brightness-110">
-                報名蒔光好聲音大賽 ↗
-            </a>
+            <div>
+                <a href="https://forms.gle/your-singing-contest-form-id" target="_blank" class="px-5 py-2.5 rounded-full gold-gradient-bg text-darknavy font-bold text-sm shadow-lg hover:brightness-110 transition">
+                    報名蒔光好聲音 ↗
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- Header 區塊 -->
-    <section class="py-12 px-4 max-w-5xl mx-auto text-center space-y-4">
-        <span class="px-4 py-1.5 rounded-full gold-border bg-darknavy/80 text-gold-300 text-xs font-semibold tracking-widest uppercase">
-            2026/12/06 (日) 14:00 - 17:00 ｜ 台中葳格國際會議中心
-        </span>
-        <h1 class="text-4xl sm:text-6xl font-black font-serif-tc gold-gradient-text">蒔光好聲音・榮耀爭鋒</h1>
-        <p class="text-gold-200 text-lg font-serif-tc">以歌會友・以聲聚力・唱出榮耀</p>
+    <!-- 頁面標題 Banner -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center space-y-4">
+        <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full gold-border bg-darknavy/80 text-gold-300 text-xs sm:text-sm font-semibold tracking-widest uppercase">
+            <span>活動一 (14:00 - 17:00) ｜ 台中葳格國際會議中心</span>
+        </div>
+        <h1 class="text-4xl sm:text-6xl font-black font-serif-tc gold-gradient-text tracking-wide">
+            2026 菁英大會師<br/>蒔光好聲音・榮耀爭鋒
+        </h1>
+        <p class="text-gold-200 text-lg sm:text-xl font-serif-tc tracking-widest pt-2">
+            以歌會友・以聲聚力・唱出榮耀
+        </p>
     </section>
 
-    <!-- 內文細節 -->
-    <main class="max-w-5xl mx-auto px-4 py-8 space-y-12">
-        
-        <!-- 一、活動宗旨 -->
-        <div class="bg-cardnavy p-8 rounded-3xl gold-border space-y-4">
-            <h3 class="text-2xl font-bold font-serif-tc text-gold-300">一、活動緣起與宗旨</h3>
-            <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
-                2026年適逢逢甲大學65週年、第10屆臺中市逢甲大學EMBA校友會，以及第20屆逢甲大學EMBA聯誼會的重要年度。第20屆聯誼會以「菁英聚力・榮耀二十」為年度主題，並以「蒔」作為傳承、播種與凝聚的核心意象。邀請在校班級、11個健會及歷屆畢業學長姐同台競演，展現逢甲EMBA團隊精神。
-            </p>
-        </div>
+    <!-- 主要內容區域 -->
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
 
-        <!-- 二、基本資訊與評審陣容 -->
-        <div class="bg-cardnavy p-8 rounded-3xl gold-border space-y-6">
-            <h3 class="text-2xl font-bold font-serif-tc text-gold-300">二、活動基本資訊與評審陣容</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                <div class="bg-darknavy/80 p-4 rounded-xl"><strong>主辦單位：</strong>逢甲大學EMBA第20屆聯誼會</div>
-                <div class="bg-darknavy/80 p-4 rounded-xl"><strong>活動日期：</strong>2026年12月6日 (日) 14:00-17:00</div>
-                <div class="bg-darknavy/80 p-4 rounded-xl"><strong>活動地點：</strong>台中葳格國際會議中心</div>
-                <div class="bg-darknavy/80 p-4 rounded-xl"><strong>參賽人數：</strong>預計 28 人（個人競賽＋團隊應援）</div>
+        <!-- 一、活動緣起與宗旨 -->
+        <section class="bg-cardnavy p-8 sm:p-10 rounded-3xl gold-border-glow space-y-4">
+            <h2 class="text-2xl font-bold font-serif-tc text-gold-300 flex items-center space-x-2">
+                <span>一、活動緣起與宗旨</span>
+            </h2>
+            <div class="text-gray-300 text-sm sm:text-base leading-relaxed space-y-3">
+                <p>2026年適逢逢甲大學65週年、第10屆臺中市逢甲大學EMBA校友會，以及第20屆逢甲大學EMBA聯誼會的重要年度。</p>
+                <p>第20屆聯誼會以「菁英聚力・榮耀二十」為年度主題，並以「蒔」作為傳承、播種與凝聚的核心意象。</p>
+                <p>延續8月1日理事長交接典禮所凝聚的能量，12月6日菁英大會師將以「蒔光好聲音」為活動亮點，邀請在校班級、11個健會及歷屆畢業學長姐同台競演。</p>
+                <p>透過歌聲、舞台魅力及應援團創意應援，展現逢甲EMBA團隊精神，讓不同屆別、班級與健會之間有更多交流機會。</p>
             </div>
-            <div class="p-4 bg-darknavy/90 rounded-xl gold-border text-sm space-y-2">
-                <p class="text-gold-300 font-bold">⚖️ 黃金評審陣容（共 5 席）：</p>
-                <p class="text-gray-300">• <strong>音樂專業評審 (2位)：</strong>聲樂老師、歌唱指導老師、音樂製作人或專業演唱工作者。</p>
-                <p class="text-gray-300">• <strong>逢甲EMBA師長 (3位)：</strong>具代表性之逢甲EMBA師長、院系主管或受邀指導老師。</p>
-            </div>
-        </div>
+        </section>
 
-        <!-- 三、評分標準表格 -->
-        <div class="bg-cardnavy p-8 rounded-3xl gold-border space-y-6">
-            <h3 class="text-2xl font-bold font-serif-tc text-gold-300">三、評分標準（滿分 100 分）</h3>
+        <!-- 二、活動基本資訊 -->
+        <section class="bg-cardnavy p-8 sm:p-10 rounded-3xl gold-border space-y-6">
+            <h2 class="text-2xl font-bold font-serif-tc text-gold-300">二、活動基本資訊</h2>
             <div class="overflow-x-auto">
                 <table class="w-full text-left text-sm border-collapse">
-                    <thead>
-                        <tr class="border-b border-gold-500/30 text-gold-400">
-                            <th class="p-3">評分項目</th>
-                            <th class="p-3">配分</th>
-                            <th class="p-3">評分重點</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-gold-500/10 text-gray-300">
-                        <tr><td class="p-3 font-bold text-white">音準與節奏</td><td class="p-3 text-gold-300">30 分</td><td class="p-3">音準穩定度、節奏掌握與拍點準確性</td></tr>
-                        <tr><td class="p-3 font-bold text-white">歌唱技巧與聲音表現</td><td class="p-3 text-gold-300">20 分</td><td class="p-3">氣息、咬字、音色與聲音控制</td></tr>
-                        <tr><td class="p-3 font-bold text-white">情感詮釋與歌曲掌握</td><td class="p-3 text-gold-300">20 分</td><td class="p-3">情緒表達、歌曲理解及感人度</td></tr>
-                        <tr><td class="p-3 font-bold text-white">舞台台風與整體表現</td><td class="p-3 text-gold-300">10 分</td><td class="p-3">自信、儀態、觀眾互動與舞台魅力</td></tr>
-                        <tr><td class="p-3 font-bold text-white">應援團團隊精神</td><td class="p-3 text-gold-300">20 分</td><td class="p-3">默契、創意、凝聚力與應援熱忱</td></tr>
+                    <tbody class="divide-y divide-gold-500/20 text-gray-200">
+                        <tr class="bg-darknavy/50"><td class="p-3.5 font-bold text-gold-400 w-1/3">主辦單位</td><td class="p-3.5">逢甲大學EMBA第20屆聯誼會</td></tr>
+                        <tr><td class="p-3.5 font-bold text-gold-400">活動名稱</td><td class="p-3.5">2026菁英大會師－蒔光好聲音・榮耀爭鋒</td></tr>
+                        <tr class="bg-darknavy/50"><td class="p-3.5 font-bold text-gold-400">活動日期</td><td class="p-3.5">2026年12月6日（星期日）</td></tr>
+                        <tr><td class="p-3.5 font-bold text-gold-400">活動時間</td><td class="p-3.5">下午14:00–17:00（工作人員11:00起進場）</td></tr>
+                        <tr class="bg-darknavy/50"><td class="p-3.5 font-bold text-gold-400">活動地點</td><td class="p-3.5">台中葳格國際會議中心</td></tr>
+                        <tr><td class="p-3.5 font-bold text-gold-400">活動形式</td><td class="p-3.5">個人歌唱競賽 ＋ 團隊應援團應援</td></tr>
+                        <tr class="bg-darknavy/50"><td class="p-3.5 font-bold text-gold-400">預計參賽人數</td><td class="p-3.5">28人</td></tr>
+                        <tr><td class="p-3.5 font-bold text-gold-400">參與對象</td><td class="p-3.5">114、115學年度各班、11個健會、畢業學長姐及應援校友</td></tr>
+                        <tr class="bg-darknavy/50"><td class="p-3.5 font-bold text-gold-400">評審陣容</td><td class="p-3.5">2～3位音樂專業老師 ＋ 3位逢甲EMBA師長（共5席）</td></tr>
                     </tbody>
                 </table>
             </div>
-        </div>
+        </section>
 
-        <!-- 四、總獎金 31 萬規劃 -->
-        <div class="bg-cardnavy p-8 rounded-3xl gold-border space-y-6">
-            <h3 class="text-2xl font-bold font-serif-tc text-gold-300">四、獎金制度與25項特色獎項（總金額 NT$ 310,000）</h3>
+        <!-- 三、參賽資格與名額規範 -->
+        <section class="bg-cardnavy p-8 sm:p-10 rounded-3xl gold-border space-y-6">
+            <h2 class="text-2xl font-bold font-serif-tc text-gold-300">三、參賽資格與名額規範</h2>
             
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
-                <div class="p-4 bg-darknavy rounded-xl gold-border">
-                    <p class="text-xs text-gold-400">🥇 冠軍 - 金聲榮耀獎</p>
-                    <p class="text-2xl font-black text-white mt-1">NT$ 80,000</p>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-sm border-collapse">
+                    <thead>
+                        <tr class="border-b border-gold-500/30 text-gold-400 bg-darknavy">
+                            <th class="p-3.5">參賽類別</th>
+                            <th class="p-3.5">名額</th>
+                            <th class="p-3.5">資格及推薦方式</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gold-500/10 text-gray-300">
+                        <tr><td class="p-3.5 font-bold text-white">114、115學年度各班</td><td class="p-3.5 text-gold-300">12名</td><td class="p-3.5">每班推派一位代表</td></tr>
+                        <tr><td class="p-3.5 font-bold text-white">聯誼會11個健會</td><td class="p-3.5 text-gold-300">11名</td><td class="p-3.5">每健會推派一位代表</td></tr>
+                        <tr><td class="p-3.5 font-bold text-white">學術發展基金會</td><td class="p-3.5 text-gold-300">1名</td><td class="p-3.5">推派一位代表</td></tr>
+                        <tr><td class="p-3.5 font-bold text-white">彰化校友協進會</td><td class="p-3.5 text-gold-300">1名</td><td class="p-3.5">推派一位代表</td></tr>
+                        <tr><td class="p-3.5 font-bold text-white">歷屆畢業學長姐</td><td class="p-3.5 text-gold-300">3名</td><td class="p-3.5">自行報名、以報名時間順序前3位正取</td></tr>
+                        <tr class="font-bold bg-darknavy/60"><td class="p-3.5 text-gold-400">合計總名額</td><td class="p-3.5 text-gold-300">28名</td><td class="p-3.5 text-gold-200">暫定名額，待最終核定</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="p-5 bg-darknavy/80 rounded-2xl border border-gold-500/30 space-y-2 text-xs sm:text-sm text-gray-300">
+                <p class="font-bold text-gold-300 text-base mb-2">📋 參賽資格補充規範：</p>
+                <p>1. 每位選手限代表一個單位，不得重複參賽。</p>
+                <p>2. 各班及健會需自行確認推薦人選及代表資格。</p>
+                <p>3. 畢業學長姐名額採公開報名，若報名超過3人，以報名時間順序前三位為正取人選，候補名額待正取人選取消後通知補上。</p>
+                <p>4. 各參賽單位可指定一位聯絡窗口，統一處理報名、伴奏、應援團及獎金領取。</p>
+                <p>5. 比賽前三名將於晚宴榮耀獻唱，季軍、亞軍、冠軍各演唱一首自選曲。</p>
+                <p class="text-gold-200 font-bold pt-2">⏰ 報名時間：活動資訊公告於10/24(六)，報名連結統一於10/27(二)中午12:00開放。</p>
+            </div>
+        </section>
+
+        <!-- 四、競賽辦法 -->
+        <section class="bg-cardnavy p-8 sm:p-10 rounded-3xl gold-border space-y-6">
+            <h2 class="text-2xl font-bold font-serif-tc text-gold-300">四、蒔光好聲音競賽辦法</h2>
+
+            <div class="space-y-4 text-xs sm:text-sm text-gray-300">
+                <div class="bg-darknavy p-5 rounded-2xl gold-border">
+                    <h3 class="font-bold text-gold-400 text-base mb-2">🎤 （一）演唱規則</h3>
+                    <ul class="space-y-1.5 list-disc list-inside">
+                        <li>採單組歌唱(每組1人)競賽，每位選手演唱一首歌曲。</li>
+                        <li>歌曲、曲風不限，語言以國語、台語、英語三種主要語言為主。</li>
+                        <li>演唱內容須適合公開活動，不得包含歧視、侮辱或其他不適當內容。</li>
+                        <li>每位參賽者建議以 3 分 30 秒至 4 分鐘為舞台時間上限（包含主持介紹、上下台與演唱）。</li>
+                        <li>為符合活動總時程，建議歌曲演唱長度控制在 3 分鐘至 3 分 30 秒，選手可自行剪輯歌曲伴奏。</li>
+                        <li>原則採預錄伴奏演唱，不採清唱以外的臨時樂團伴奏；若需特殊演出，須事前取得主辦單位同意。</li>
+                        <li>伴奏原則以無主唱音軌為主，不得以預錄本人演唱聲音代替現場演唱。</li>
+                        <li>參賽者須於指定期限 11/20(五) 前繳交歌曲名稱、演唱者、音樂檔案及相關舞台需求。</li>
+                    </ul>
                 </div>
-                <div class="p-4 bg-darknavy rounded-xl gold-border">
-                    <p class="text-xs text-gold-400">🥈 亞軍 - 銀聲卓越獎</p>
-                    <p class="text-2xl font-black text-white mt-1">NT$ 50,000</p>
+
+                <div class="bg-darknavy p-5 rounded-2xl gold-border">
+                    <h3 class="font-bold text-gold-400 text-base mb-2">🎲 （二）出場順序抽籤與候場</h3>
+                    <ul class="space-y-1.5 list-disc list-inside">
+                        <li>參賽名單確認後，將於比賽當天 12:00 統一集合公開抽籤，並依序建立選手編號。</li>
+                        <li>建議依上下半場平均分配各類別參賽者，避免同類型團體過度集中。</li>
+                        <li>選手須於正式演出前至少 3 個序號前往候場區集合。</li>
+                        <li>未依指定時間完成候場，經主持人唱名後仍未到場者，視同棄賽，不得代唱。</li>
+                    </ul>
                 </div>
-                <div class="p-4 bg-darknavy rounded-xl gold-border">
-                    <p class="text-xs text-gold-400">🥉 季軍 - 銅聲風采獎</p>
-                    <p class="text-2xl font-black text-white mt-1">NT$ 30,000</p>
+
+                <div class="bg-darknavy p-5 rounded-2xl gold-border">
+                    <h3 class="font-bold text-gold-400 text-base mb-2">🎛️ （三）音樂及舞台技術規範</h3>
+                    <ul class="space-y-1.5 list-disc list-inside">
+                        <li>參賽者於指定期限提供伴奏音檔，統一採用 MP3 或 WAV 格式提交伴奏檔。</li>
+                        <li>每位選手可於當天提前至場地確認站位。</li>
+                        <li>選手上台前由音控人員再次確認歌曲編號。</li>
+                        <li>音檔播放異常時，舞台總控得安排重新演唱或於後續時段補賽，不計入選手失誤。應指定備用音檔與備援播放設備。</li>
+                        <li>大型道具、特殊燈光及需長時間上下台的表演方式，應事前申請並取得同意。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 五、應援團應援規劃 -->
+        <section class="bg-cardnavy p-8 sm:p-10 rounded-3xl gold-border space-y-6">
+            <h2 class="text-2xl font-bold font-serif-tc text-gold-300">五、應援團應援規劃</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs sm:text-sm">
+                <div class="bg-darknavy p-5 rounded-2xl gold-border space-y-2">
+                    <h3 class="font-bold text-gold-400 text-base">📣 （一）應援方式</h3>
+                    <p class="text-gray-300 leading-relaxed">各參賽班級、健會及畢業學長姐可自行組織應援團，營造舞台熱度與團隊榮譽。可使用形式：</p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-300">
+                        <li>團隊口號及特色加油聲。</li>
+                        <li>手舉牌、布條及 LED 應援燈。</li>
+                        <li>統一團體服裝或主題造型。</li>
+                        <li>創意手勢、隊形或簡短應援舞蹈。</li>
+                        <li>結合班級文化及健會特色設計之專屬內容。</li>
+                    </ul>
+                </div>
+
+                <div class="bg-darknavy p-5 rounded-2xl gold-border space-y-2">
+                    <h3 class="font-bold text-gold-400 text-base">🛑 （二）應援管理規範</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-300">
+                        <li>各參賽單位設置指定應援區，實際座位數依報名人數及場地配置分配。</li>
+                        <li>應援團應援以不影響選手演唱及評審聆聽為原則。</li>
+                        <li>應援時間包含在選手 4 分鐘時間內，地點不限定台上或台下（不得遮蔽評審視線）。</li>
+                        <li>不得使用高分貝氣笛、爆音器具或妨礙他人演出的設備。</li>
+                        <li>不得干擾其他選手、評審或舞台工作人員，不得占用消防通道及舞台動線。</li>
+                        <li>應援團評分重視團隊默契、創意、參與熱忱及運動家精神，不以人數、音量決定高低。</li>
+                        <li>畢業學長姐可自行邀集校友、同班同學或親友組成應援團。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 六、評審配置與評分標準 -->
+        <section class="bg-cardnavy p-8 sm:p-10 rounded-3xl gold-border space-y-6">
+            <h2 class="text-2xl font-bold font-serif-tc text-gold-300">六、評審配置與評分標準</h2>
+
+            <div class="bg-darknavy p-5 rounded-2xl gold-border space-y-2 text-xs sm:text-sm">
+                <h3 class="font-bold text-gold-400 text-base">⚖️ （一）黃金評審陣容（共 5 席）</h3>
+                <p class="text-gray-300">• <strong>音樂專業評審 (2位)：</strong>聲樂老師、歌唱指導老師、音樂製作人或專業演唱工作者。</p>
+                <p class="text-gray-300">• <strong>逢甲EMBA師長 (3位)：</strong>具代表性之逢甲EMBA師長、院系主管或受邀指導老師。</p>
+            </div>
+
+            <!-- 評分標準表格 -->
+            <div class="space-y-3">
+                <h3 class="font-bold text-gold-400 text-base">（二）詳細評分標準表（滿分 100 分）</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm border-collapse">
+                        <thead>
+                            <tr class="border-b border-gold-500/30 text-gold-400 bg-darknavy">
+                                <th class="p-3.5">評分項目</th>
+                                <th class="p-3.5">配分</th>
+                                <th class="p-3.5">評分重點與評分指標</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gold-500/10 text-gray-300">
+                            <tr><td class="p-3.5 font-bold text-white">音準與節奏</td><td class="p-3.5 font-bold text-gold-300">30 分</td><td class="p-3.5">音準穩定度、節奏掌握與拍點準確性</td></tr>
+                            <tr><td class="p-3.5 font-bold text-white">歌唱技巧與聲音表現</td><td class="p-3.5 font-bold text-gold-300">20 分</td><td class="p-3.5">氣息、咬字、音色與聲音控制</td></tr>
+                            <tr><td class="p-3.5 font-bold text-white">情感詮釋與歌曲掌握</td><td class="p-3.5 font-bold text-gold-300">20 分</td><td class="p-3.5">情緒表達、歌曲理解及感染力</td></tr>
+                            <tr><td class="p-3.5 font-bold text-white">舞台台風與整體表現</td><td class="p-3.5 font-bold text-gold-300">10 分</td><td class="p-3.5">自信、儀態、觀眾互動與舞台魅力</td></tr>
+                            <tr><td class="p-3.5 font-bold text-white">應援團團隊精神</td><td class="p-3.5 font-bold text-gold-300">20 分</td><td class="p-3.5">默契、創意、凝聚力與應援精神</td></tr>
+                            <tr class="font-bold bg-darknavy/60"><td class="p-3.5 text-gold-400">合計總分</td><td class="p-3.5 text-gold-300">100 分</td><td class="p-3.5 text-gold-200">歌唱成績 80 分 ＋ 應援成績 20 分</td></tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
-            <div class="space-y-2">
-                <p class="text-sm font-bold text-gold-200">⭐ 25 項特色獎項（每名獎金 NT$ 6,000）：</p>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2 text-xs text-center">
-                    <div class="p-2 bg-darknavy/60 rounded border border-gold-500/20">1. 最佳人氣之星獎</div>
-                    <div class="p-2 bg-darknavy/60 rounded border border-gold-500/20">2. 最佳舞台魅力獎</div>
-                    <div class="p-2 bg-darknavy/60 rounded border border-gold-500/20">3. 最佳情感詮釋獎</div>
-                    <div class="p-2 bg-darknavy/60 rounded border border-gold-500/20">4. 最佳金嗓實力獎</div>
-                    <div class="p-2 bg-darknavy/60 rounded border border-gold-500/20">5. 最佳天籟美聲獎</div>
-                    <div class="p-2 bg-darknavy/60 rounded border border-gold-500/20">6. 最佳震撼高音獎</div>
-                    <div class="p-2 bg-darknavy/60 rounded border border-gold-500/20">7. 最佳深情演繹獎</div>
-                    <div class="p-2 bg-darknavy/60 rounded border border-gold-500/20">8. 最佳節奏律動獎</div>
-                    <div class="p-2 bg-darknavy/60 rounded border border-gold-500/20">9. 最佳舞台活力獎</div>
-                    <div class="p-2 bg-darknavy/60 rounded border border-gold-500/20">10. 最佳經典傳唱獎</div>
-                    <div class="p-2 bg-darknavy/60 rounded border border-gold-500/20">11. 最佳台語金曲獎</div>
-                    <div class="p-2 bg-darknavy/60 rounded border border-gold-500/20">12. 最佳跨界風格獎</div>
-                    <div class="p-2 bg-darknavy/60 rounded border border-gold-500/20">13. 最佳造型風采獎</div>
-                    <div class="p-2 bg-darknavy/60 rounded border border-gold-500/20">14. 最佳視覺焦點獎</div>
-                    <div class="p-2 bg-darknavy/60 rounded border border-gold-500/20">15. 最佳創意演出獎</div>
-                    <div class="p-2 bg-darknavy/60 rounded border border-gold-500/20">16. 最佳互動魅力獎</div>
-                    <div class="p-2 bg-darknavy/60 rounded border border-gold-500/20">17. 最佳氣勢非凡獎</div>
-                    <div class="p-2 bg-darknavy/60 rounded border border-gold-500/20">18. 最佳驚艷演出獎</div>
-                    <div class="p-2 bg-darknavy/60 rounded border border-gold-500/20">19. 最佳歌聲感染獎</div>
-                    <div class="p-2 bg-darknavy/60 rounded border border-gold-500/20">20. 最佳勇氣挑戰獎</div>
-                    <div class="p-2 bg-darknavy/60 rounded border border-gold-500/20">21. 最佳自信風采獎</div>
-                    <div class="p-2 bg-darknavy/60 rounded border border-gold-500/20">22. 最佳魅力新聲獎</div>
-                    <div class="p-2 bg-darknavy/60 rounded border border-gold-500/20">23. 最佳音樂故事獎</div>
-                    <div class="p-2 bg-darknavy/60 rounded border border-gold-500/20">24. 最佳溫暖人心獎</div>
-                    <div class="p-2 bg-darknavy/60 rounded border border-gold-500/20">25. 最佳菁英風華獎</div>
+            <!-- 計算公式與規則 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-gray-300">
+                <div class="bg-darknavy p-4 rounded-xl border border-gold-500/20 space-y-1.5">
+                    <p class="font-bold text-gold-300">🧮 （三）評分計算與迴避方式</p>
+                    <p>• 由音樂專業評審及EMBA師長依相同分量表評分，取有效評審分數平均值。</p>
+                    <p>• 所有評審採統一評分表，分數保留至小數點後二位。</p>
+                    <p>• 若評審與特定參賽單位存在直接利害關係，應訂明迴避與有效成績計算方式。</p>
+                </div>
+
+                <div class="bg-darknavy p-4 rounded-xl border border-gold-500/20 space-y-1.5">
+                    <p class="font-bold text-gold-300">⚖️ （四）同分排序順序</p>
+                    <p>1. 歌唱項目 80 分總分較高者優先。</p>
+                    <p>2. 如仍同分，以音準與節奏 30 分較高者優先。</p>
+                    <p>3. 再同分，以情感詮釋與歌曲掌握 20 分較高者優先。</p>
+                    <p>4. 仍無法區分時，交由無利益衝突之專業評審以評議決定。</p>
                 </div>
             </div>
-        </div>
 
-        <!-- 報名按鈕區 -->
-        <div class="text-center pt-6">
-            <a href="https://forms.gle/your-singing-contest-form-id" target="_blank" class="px-10 py-5 rounded-2xl gold-gradient-bg text-darknavy font-black text-xl shadow-2xl hover:scale-105 transition inline-block">
-                立即填寫蒔光好聲音大賽 Google 報名表 ↗
-            </a>
-        </div>
+            <div class="bg-darknavy p-4 rounded-xl border border-gold-500/20 text-xs text-gray-300 space-y-1">
+                <p class="font-bold text-gold-300 text-sm mb-1">📝 （五）評分作業嚴謹規範</p>
+                <p>評審依選手編號同步記錄分數，評分表由專人逐張收回。成績統計組採雙人交叉核對（試算表及紙本雙重備援）。個別評審原始分數不於活動中公開。專業講評採賽後綜合總評，不逐一講評以節省時間。</p>
+            </div>
+        </section>
 
-    </main>
+        <!-- 七、獎金制度與頒獎原則 -->
+        <section class="bg-cardnavy p-8 sm:p-10 rounded-3xl gold-border space-y-8">
+            <h2 class="text-2xl font-bold font-serif-tc text-gold-300">七、獎金制度與頒獎原則（總獎金 NT$ 310,000）</h2>
 
-    <footer class="bg-darknavy border-t border-gold-500/30 py-8 text-center text-sm text-gray-400 mt-12">
-        <p class="font-bold gold-gradient-text font-serif-tc">逢甲大學 EMBA 第 20 屆聯誼會</p>
-    </footer>
+            <!-- 前三名獎金表 -->
+            <div class="space-y-3">
+                <h3 class="font-bold text-gold-400 text-base">（一）名次大獎表（小計 NT$ 160,000）</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+                    <div class="p-5 bg-darknavy rounded-2xl gold-border space-y-1">
+                        <span class="text-xs px-2.5 py-0.5 rounded bg-gold-500/20 text-gold-300 font-bold">1名</span>
+                        <h4 class="text-lg font-bold text-gold-300">🥇 冠軍－金聲榮耀獎</h4>
+                        <p class="text-3xl font-black text-white font-serif-tc pt-1">NT$ 80,000</p>
+                    </div>
+                    <div class="p-5 bg-darknavy rounded-2xl gold-border space-y-1">
+                        <span class="text-xs px-2.5 py-0.5 rounded bg-gold-500/20 text-gold-300 font-bold">1名</span>
+                        <h4 class="text-lg font-bold text-gold-300">🥈 亞軍－銀聲卓越獎</h4>
+                        <p class="text-3xl font-black text-white font-serif-tc pt-1">NT$ 50,000</p>
+                    </div>
+                    <div class="p-5 bg-darknavy rounded-2xl gold-border space-y-1">
+                        <span class="text-xs px-2.5 py-0.5 rounded bg-gold-500/20 text-gold-300 font-bold">1名</span>
+                        <h4 class="text-lg font-bold text-gold-300">🥉 季軍－銅聲風采獎</h4>
+                        <p class="text-3xl font-black text-white font-serif-tc pt-1">NT$ 30,000</p>
+                    </div>
+                </div>
+            </div>
 
-</body>
-</html>
+            <!-- 25 項特色獎項完整列表 -->
+            <div class="space-y-4">
+                <div class="flex justify-between items-center border-b border-gold-500/30 pb-2">
+                    <h3 class="font-bold text-gold-400 text-base">（二）25 項特色獎項列表（每名獎金 NT$ 6,000 / 合計 NT$ 150,000）</h3>
+                    <span class="text-xs text-gold-300 font-bold">每位完成參賽者皆享榮譽</span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs">
+                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center">
+                        <span class="font-bold text-gold-300">1. 最佳人氣之星獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span>
+                    </div>
+                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center">
+                        <span class="font-bold text-gold-300">2. 最佳舞台魅力獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span>
+                    </div>
+                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center">
+                        <span class="font-bold text-gold-300">3. 最佳情感詮釋獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span>
+                    </div>
+                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center">
+                        <span class="font-bold text-gold-300">4. 最佳金嗓實力獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span>
+                    </div>
+                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center">
+                        <span class="font-bold text-gold-300">5. 最佳天籟美聲獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span>
+                    </div>
+                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center">
+                        <span class="font-bold text-gold-300">6. 最佳震撼高音獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span>
+                    </div>
+                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center">
+                        <span class="font-bold text-gold-300">7. 最佳深情演繹獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span>
+                    </div>
+                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center">
+                        <span class="font-bold text-gold-300">8. 最佳節奏律動獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span>
+                    </div>
+                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center">
+                        <span class="font-bold text-gold-300">9. 最佳舞台活力獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span>
+                    </div>
+                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center">
+                        <span class="font-bold text-gold-300">10. 最佳經典傳唱獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span>
+                    </div>
+                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center">
+                        <span class="font-bold text-gold-300">11. 最佳台語金曲獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span>
+                    </div>
+                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center">
+                        <span class="font-bold text-gold-300">12. 最佳跨界風格獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span>
+                    </div>
+                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center">
+                        <span class="font-bold text-gold-300">13. 最佳造型風采獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span>
+                    </div>
+                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center">
+                        <span class="font-bold text-gold-300">14. 最佳視覺焦點獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span>
+                    </div>
+                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center">
+                        <span class="font-bold text-gold-300">15. 最佳創意演出獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span>
+                    </div>
+                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center">
+                        <span class="font-bold text-gold-300">16. 最佳互動魅力獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span>
+                    </div>
+                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center">
+                        <span class="font-bold text-gold-300">17. 最佳氣勢非凡獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span>
+                    </div>
+                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center">
+                        <span class="font-bold text-gold-300">18. 最佳驚艷演出獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span>
+                    </div>
+                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center">
+                        <span class="font-bold text-gold-300">19. 最佳歌聲感染獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span>
+                    </div>
+                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center">
+                        <span class="font-bold text-gold-300">20. 最佳勇氣挑戰獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span>
+                    </div>
+                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center">
+                        <span class="font-bold text-gold-300">21. 最佳自信風采獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span>
+                    </div>
+                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center">
+                        <span class="font-bold text-gold-300">22. 最佳魅力新聲獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span>
+                    </div>
+                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center">
+                        <span class="font-bold text-gold-300">23. 最佳音樂故事獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span>
+                    </div>
+                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center">
+                        <span class="font-bold text-gold-300">24. 最佳溫暖人心獎</span><span class="text-white font-mono font-bold">NT$ 6,000</span>
+                    </div>
+                    <div class="p-3 bg-darknavy/80 rounded-xl border border-gold-500/20 flex justify-between items-center">
+                        <span class="font-bold text-gold-300">

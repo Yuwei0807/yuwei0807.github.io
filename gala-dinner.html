@@ -10,10 +10,7 @@
             theme: {
                 extend: {
                     colors: {
-                        gold: {
-                            100: '#FFF9E6', 200: '#FFECA8', 300: '#FFE28A',
-                            400: '#F5C842', 500: '#D4AF37', 600: '#AA820A', 700: '#806000'
-                        },
+                        gold: { 100: '#FFF9E6', 200: '#FFECA8', 300: '#FFE28A', 400: '#F5C842', 500: '#D4AF37', 600: '#AA820A', 700: '#806000' },
                         darknavy: '#050A14', cardnavy: '#0C1526', accentblue: '#132238'
                     }
                 }
@@ -26,14 +23,10 @@
         .font-serif-tc { font-family: 'Noto Serif TC', serif; }
         .gold-gradient-text {
             background: linear-gradient(135deg, #FFF9E6 0%, #FFE28A 30%, #D4AF37 70%, #AA820A 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
         .gold-border { border: 1px solid #D4AF37; }
-        .gold-border-glow {
-            border: 1px solid rgba(212, 175, 55, 0.4);
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
-        }
+        .gold-border-glow { border: 1px solid rgba(212, 175, 55, 0.4); box-shadow: 0 0 20px rgba(212, 175, 55, 0.15); }
         .gold-gradient-bg { background: linear-gradient(135deg, #FFE28A 0%, #D4AF37 50%, #AA820A 100%); }
     </style>
 </head>
@@ -63,7 +56,7 @@
 
     <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center space-y-4">
         <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full gold-border bg-darknavy/80 text-gold-300 text-xs sm:text-sm font-semibold tracking-widest uppercase">
-            <span>2026/12/06 (日) 18:00 - 21:00 (17:30報到) ｜ 台中葳格國際會議中心</span>
+            <span>2026/12/06 (日) 18:00 - 21:00 ｜ 台中葳格國際會議中心</span>
         </div>
         <h1 class="text-4xl sm:text-6xl font-black font-serif-tc gold-gradient-text tracking-wide">
             2026 菁英大會師<br/>蒔光盛宴・榮耀之夜
@@ -75,12 +68,26 @@
 
     <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
 
+        <!-- ⭐ 顯目提醒區塊：特別演出 -->
+        <div class="bg-gradient-to-r from-gold-600/20 via-gold-500/30 to-gold-600/20 border-2 border-gold-400 p-8 rounded-3xl shadow-2xl text-center space-y-3 relative overflow-hidden gold-border-glow">
+            <div class="absolute -right-10 -top-10 w-40 h-40 bg-gold-400/20 rounded-full blur-3xl"></div>
+            <div class="inline-block px-4 py-1 rounded-full bg-gold-500 text-darknavy font-black text-xs uppercase tracking-widest shadow-lg">
+                ✨ 重磅亮點・特別演出 ✨
+            </div>
+            <h3 class="text-2xl sm:text-4xl font-black font-serif-tc gold-gradient-text">
+                下午歌唱大賽前三名選手，各演唱一首自選曲
+            </h3>
+            <p class="text-gold-200 text-sm sm:text-base font-medium max-w-2xl mx-auto">
+                下午熱情競技的歌聲將延續至晚宴舞台！邀請歌唱大賽前三名得獎菁英於餐會中榮耀獻唱，共饗音樂與榮耀盛宴。
+            </p>
+        </div>
+
         <section class="bg-cardnavy p-8 sm:p-10 rounded-3xl gold-border-glow space-y-4">
             <h2 class="text-2xl font-bold font-serif-tc text-gold-300">一、活動宗旨</h2>
             <div class="text-gray-300 text-sm sm:text-base leading-relaxed space-y-3">
-                <p>延續第20屆聯誼會「蒔」的年度主題精神，透過年度菁英大會師餐會，邀請逢甲EMBA歷屆師長、校友及各健會會員齊聚一堂，共同見證第20屆的傳承與榮耀。</p>
-                <p>本次餐會結合貴賓致詞、年度表揚、校友情誼交流、蒔光好聲音前三名演出，以及知名樂團音樂饗宴，讓下午熱情競技的氛圍，延續成晚間溫馨而璀璨的榮耀盛典。</p>
-                <p>以「蒔光盛宴・榮耀之夜」為主題，象徵過去二十年的耕耘與累積，在今夜匯聚成一場屬於全體逢甲EMBA菁英的盛會。</p>
+                <p>二十年光陰累積成今日的榮耀，歷屆菁英再度齊聚，在歲月與情誼交織的夜晚，共享傳承的成果，迎向嶄新篇章。</p>
+                <p>延續第20屆聯誼會「蒔」的年度主題精神，透過年度菁英大會師晚宴，邀請逢甲EMBA歷屆師長、校友及各健會會員齊聚一堂，共同見證第20屆的傳承與榮耀。</p>
+                <p>本次晚宴結合貴賓致詞、年度表揚、校友情誼交流、歌唱大賽前三名演出，以及知名樂團音樂饗宴，讓下午熱情競技的負擔，延續成晚間溫馨而璀璨的榮耀盛典。</p>
             </div>
         </section>
 
@@ -90,14 +97,13 @@
                 <table class="w-full text-left text-sm border-collapse">
                     <tbody class="divide-y divide-gold-500/20 text-gray-200">
                         <tr class="bg-darknavy/50"><td class="p-3.5 font-bold text-gold-400 w-1/3">主辦單位</td><td class="p-3.5">逢甲大學EMBA第20屆聯誼會</td></tr>
-                        <tr><td class="p-3.5 font-bold text-gold-400">活動名稱</td><td class="p-3.5">2026菁英大會師－蒔光盛宴・榮耀之夜</td></tr>
+                        <tr><td class="p-3.5 font-bold text-gold-400">活動名稱</td><td class="p-3.5">蒔光盛宴・榮耀之夜</td></tr>
                         <tr class="bg-darknavy/50"><td class="p-3.5 font-bold text-gold-400">活動日期</td><td class="p-3.5">2026年12月6日（星期日）</td></tr>
-                        <tr><td class="p-3.5 font-bold text-gold-400">活動時間</td><td class="p-3.5">18:00–21:00（17:30–18:00 迎賓報到）</td></tr>
-                        <tr class="bg-darknavy/50"><td class="p-3.5 font-bold text-gold-400">活動地點</td><td class="p-3.5">台中葳格國際會議中心</td></tr>
-                        <tr><td class="p-3.5 font-bold text-gold-400">活動形式</td><td class="p-3.5">餐會、貴賓致詞、表揚頒獎、歌唱表演、樂團演出</td></tr>
-                        <tr class="bg-darknavy/50"><td class="p-3.5 font-bold text-gold-400">演出嘉賓</td><td class="p-3.5">知名樂團現場精彩演出</td></tr>
-                        <tr><td class="p-3.5 font-bold text-gold-400">特別演出</td><td class="p-3.5">下午「蒔光好聲音」前三名選手，各演唱一首自選曲</td></tr>
-                        <tr class="bg-darknavy/50"><td class="p-3.5 font-bold text-gold-400">邀請對象</td><td class="p-3.5">逢甲EMBA師長、歷屆學長姐、114及115學年度各班、11個健會及貴賓</td></tr>
+                        <tr><td class="p-3.5 font-bold text-gold-400">活動時間</td><td class="p-3.5">18:00–21:00（迎賓報到 17:30–18:00）</td></tr>
+                        <tr class="bg-darknavy/50"><td class="p-3.5 font-bold text-gold-400">活動地點</td><td class="p-3.5">台中葳格國際會議中心 B2 中泰韓廳</td></tr>
+                        <tr><td class="p-3.5 font-bold text-gold-400">報名截止</td><td class="p-3.5 text-gold-300 font-bold">2026年11月08日（星期日） 23:59 截止</td></tr>
+                        <tr class="bg-darknavy/50"><td class="p-3.5 font-bold text-gold-400">特別演出</td><td class="p-3.5 text-gold-300 font-bold">下午歌唱大賽前三名選手，各演唱一首自選曲</td></tr>
+                        <tr><td class="p-3.5 font-bold text-gold-400">邀請對象</td><td class="p-3.5">逢甲EMBA師長、歷屆學長姐、114及115學年度各班、11個健會及貴賓</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -112,63 +118,38 @@
                 </div>
                 <div class="bg-darknavy p-5 rounded-2xl gold-border space-y-2">
                     <p class="text-gold-400 font-bold text-base">第二篇章｜菁英榮耀</p>
-                    <p class="text-gray-300 leading-relaxed">安排年度重要表揚與獎項頒發，感謝支持聯誼會發展的師長、校友及團體，展現逢甲EMBA的凝聚力與榮譽精神。</p>
+                    <p class="text-gray-300 leading-relaxed">感謝支持聯誼會發展的師長、校友及團體，展現逢甲EMBA的凝聚力與榮譽精神。</p>
                 </div>
                 <div class="bg-darknavy p-5 rounded-2xl gold-border space-y-2">
                     <p class="text-gold-400 font-bold text-base">第三篇章｜聲耀蒔光</p>
-                    <p class="text-gray-300 leading-relaxed">邀請下午「蒔光好聲音・榮耀爭鋒」歌唱大賽前三名得獎選手，於餐會舞台各演唱一首自選曲，讓校友共同欣賞當日優秀選手的演出。</p>
+                    <p class="text-gray-300 leading-relaxed">邀請下午「蒔光好聲音・榮耀爭鋒」歌唱大賽前三名得獎選手，於晚宴舞台各演唱一首自選曲，讓校友共同欣賞當日優秀選手的演出。</p>
                 </div>
                 <div class="bg-darknavy p-5 rounded-2xl gold-border space-y-2">
                     <p class="text-gold-400 font-bold text-base">第四篇章｜璀璨盛宴</p>
-                    <p class="text-gray-300 leading-relaxed">由知名樂團帶來現場音樂演出，搭配餐會交流，營造歡樂、熱情且具質感的音樂饗宴，為年度大會師畫下精彩句點。</p>
+                    <p class="text-gray-300 leading-relaxed">由知名樂團帶來現場音樂演出，搭配晚宴交流，營造歡樂、熱情且具質感的音樂饗宴，為年度大會師畫下精彩句點。</p>
                 </div>
             </div>
         </section>
 
+        <!-- 整日活動時間軸 -->
         <section class="bg-cardnavy p-8 sm:p-10 rounded-3xl gold-border space-y-6">
-            <h2 class="text-2xl font-bold font-serif-tc text-gold-300">四、餐會初版 Rundown 流程表</h2>
+            <h2 class="text-2xl font-bold font-serif-tc text-gold-300">四、2026年12月6日 ｜ 菁英大會師 整日活動時間軸</h2>
             <div class="overflow-x-auto">
                 <table class="w-full text-left text-sm border-collapse">
                     <thead>
                         <tr class="border-b border-gold-500/30 text-gold-400 bg-darknavy">
-                            <th class="p-3.5">時間</th>
-                            <th class="p-3.5">流程項目</th>
+                            <th class="p-3.5 w-1/4">時間時段</th>
+                            <th class="p-3.5">活動內容與流程細節</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gold-500/10 text-gray-300">
-                        <tr><td class="p-3.5 font-bold text-gold-300">17:30 – 18:00</td><td class="p-3.5">迎賓報到</td></tr>
-                        <tr><td class="p-3.5 font-bold text-gold-300">17:40 – 17:55</td><td class="p-3.5">貴賓集合</td></tr>
-                        <tr><td class="p-3.5 font-bold text-gold-300">18:00 – 18:05</td><td class="p-3.5">餐會開場</td></tr>
-                        <tr><td class="p-3.5 font-bold text-gold-300">18:05 – 18:10</td><td class="p-3.5">貴賓進場</td></tr>
-                        <tr><td class="p-3.5 font-bold text-gold-300">18:10 – 18:25</td><td class="p-3.5">貴賓致詞</td></tr>
-                        <tr><td class="p-3.5 font-bold text-gold-300">18:25 – 18:30</td><td class="p-3.5">介紹貴賓</td></tr>
-                        <tr><td class="p-3.5 font-bold text-gold-300">18:30 – 18:40</td><td class="p-3.5">蒔光好聲音競賽成果公佈</td></tr>
-                        <tr><td class="p-3.5 font-bold text-gold-300">18:45 – 19:00</td><td class="p-3.5">前三名榮耀獻唱</td></tr>
-                        <tr><td class="p-3.5 font-bold text-gold-300">19:00 – 19:10</td><td class="p-3.5">團體大合照</td></tr>
-                        <tr><td class="p-3.5 font-bold text-gold-300">19:10 – 21:00</td><td class="p-3.5">知名樂團演出 ＆ 聯誼餐聚</td></tr>
-                        <tr><td class="p-3.5 font-bold text-gold-300">20:55 – 21:00</td><td class="p-3.5">閉幕與送賓</td></tr>
-                        <tr><td class="p-3.5 font-bold text-gold-300">21:00 – 21:30</td><td class="p-3.5">撤場與清點</td></tr>
+                        <tr><td class="p-3.5 font-bold text-gold-300">12:00 – 13:30</td><td class="p-3.5">參賽者統一 12:00 公開抽籤。舞台、音檔、評分設備與參賽者檢錄。</td></tr>
+                        <tr><td class="p-3.5 font-bold text-gold-300">14:00 – 17:00</td><td class="p-3.5"><strong>活動一｜蒔光好聲音・榮耀爭鋒</strong><br/>28位選手歌唱競賽、評審總評及頒獎（B2 新加坡廳）。</td></tr>
+                        <tr><td class="p-3.5 font-bold text-gold-300">17:00 – 17:30</td><td class="p-3.5"><strong>兩場活動轉場</strong><br/>歌唱大賽結束，設備與場地轉換；樂團準備。</td></tr>
+                        <tr><td class="p-3.5 font-bold text-gold-300">17:30 – 18:00</td><td class="p-3.5"><strong>晚宴迎賓</strong><br/>貴賓接待、賓客入場、拍照交流（B2 中泰韓廳）。</td></tr>
+                        <tr><td class="p-3.5 font-bold text-gold-300">18:00 – 21:00</td><td class="p-3.5"><strong>活動二｜蒔光盛宴・榮耀之夜</strong><br/>致詞、表揚、前三名獻唱、樂團演出、交流餐會。</td></tr>
                     </tbody>
                 </table>
-            </div>
-            <p class="text-xs text-gray-400">* 本表為活動初稿。實際時間須配合桌宴上菜、貴賓名單、樂團合約及場地方規定調整。</p>
-        </section>
-
-        <section class="bg-cardnavy p-8 sm:p-10 rounded-3xl gold-border space-y-6">
-            <h2 class="text-2xl font-bold font-serif-tc text-gold-300">五、餐會報名與匯款須知 (11/20 截止)</h2>
-            <div class="space-y-4 text-xs sm:text-sm text-gray-300">
-                <div class="bg-darknavy p-5 rounded-2xl gold-border">
-                    <h3 class="font-bold text-gold-400 text-base mb-1">🎓 在校生報名規範</h3>
-                    <p>務必由班級指定單一聯絡窗口統一報名「班級總人數」，並一次匯款總額（需填寫窗口姓名、聯繫方式及匯款帳號後五碼）。</p>
-                </div>
-                <div class="bg-darknavy p-5 rounded-2xl gold-border">
-                    <h3 class="font-bold text-gold-400 text-base mb-1">🏸 十一健會報名規範</h3>
-                    <p>每健會以 1 桌為限，由各健會單一聯絡窗口統一報名與完成匯款作業。</p>
-                </div>
-                <div class="bg-darknavy p-5 rounded-2xl gold-border">
-                    <h3 class="font-bold text-gold-400 text-base mb-1">👔 畢業學長姐報名規範</h3>
-                    <p>以個人為單位填寫，需填寫屆別、班級、姓名、聯繫電話及匯款帳號後五碼。</p>
-                </div>
             </div>
         </section>
 
@@ -176,7 +157,7 @@
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfiqPpIXvy8lM5P55GkdSZwCEkbDN3-u7tvW6IQAHNKHM3MQg/viewform?usp=publish-editor" target="_blank" class="px-10 py-5 rounded-2xl bg-accentblue gold-border text-gold-300 font-black text-xl shadow-2xl hover:bg-gold-500/20 transition inline-block">
                 開啟【蒔光盛宴餐會】Google 官方報名表單 ↗
             </a>
-            <p class="text-xs text-gold-400 mt-3">請於 11/20 前完成線上報名與匯款作業</p>
+            <p class="text-xs text-gold-400 mt-3">請於 <span class="font-bold text-gold-300">11/08(日) 報名截止</span> 前完成線上報名與匯款作業</p>
         </section>
 
     </main>
